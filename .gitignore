@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 虚拟环境
+venv/
+env/
+ENV/
+myenv/
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 代码检查工具
+.ruff_cache/
+.mypy_cache/
+
+# 备份文件（重要！不要上传）
+backups/
+*.tar.gz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db
