@@ -2,6 +2,7 @@
 
 import os
 import time
+import pytest
 
 from backup_py.main import cleanup_old_backups, create_backup
 
@@ -71,3 +72,28 @@ def test_cleanup_nonexistent_dir():
     """测试目录不存在时返回空。"""
     deleted = cleanup_old_backups("/nonexistent/path", keep_days=7)
     assert len(deleted) == 0
+
+
+def test_my_first_test():
+    """我的第一个测试。"""
+    assert 1 + 1 == 2
+
+@pytest.mark.parametrize("keep_days, expected_count", [
+    (7, 1),      # 保留7天，删除1个（8天前）
+    (10, 0),     # 保留10天，不删除
+    (1, 1),      # 保留1天，删除1个
+])
+def test_cleanup_with_param(tmp_path, keep_days, expected_count):
+    """参数化测试清理功能。"""
+    backup_dir = tmp_path / "backups"
+    backup_dir.mkdir()
+
+    # 创建一个8天前的文件
+    old_file = backup_dir / "backup_old.tar.gz"
+    old_file.touch()
+    eight_days_ago = time.time() - 8 * 24 * 3600
+    os.utime(old_file, (eight_days_ago, eight_days_ago))
+
+    deleted = cleanup_old_backups(str(backup_dir), keep_days=keep_days)
+
+    assert len(deleted) == expected_count
