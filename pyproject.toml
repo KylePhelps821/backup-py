@@ -13,11 +13,16 @@ dev = [
     "pytest>=7.0",
     "black>=23.0",
     "ruff>=0.1.0",
+    "mypy>=1.0",
+    "freezegun>=1.4.0",
 ]
 
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+backup_py = ["py.typed"]
 
 [tool.black]
 line-length = 88
@@ -26,6 +31,15 @@ target-version = ['py310']
 [tool.ruff]
 line-length = 88
 target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+explicit_package_bases = true
+mypy_path = "src"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

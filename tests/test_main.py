@@ -2,12 +2,13 @@
 
 import os
 import time
+
 import pytest
 
 from backup_py.main import cleanup_old_backups, create_backup
 
 
-def test_create_backup(tmp_path):
+def test_create_backup(tmp_path) -> None:
     """测试创建备份。"""
     source = tmp_path / "source"
     source.mkdir()
@@ -33,7 +34,7 @@ def test_create_backup_creates_backup_dir(tmp_path):
     assert backup_dir.exists()
 
 
-def test_cleanup_old_backups(tmp_path):
+def test_cleanup_old_backups(tmp_path) -> None:
     """测试清理旧备份。"""
     backup_dir = tmp_path / "backups"
     backup_dir.mkdir()
@@ -78,11 +79,15 @@ def test_my_first_test():
     """我的第一个测试。"""
     assert 1 + 1 == 2
 
-@pytest.mark.parametrize("keep_days, expected_count", [
-    (7, 1),      # 保留7天，删除1个（8天前）
-    (10, 0),     # 保留10天，不删除
-    (1, 1),      # 保留1天，删除1个
-])
+
+@pytest.mark.parametrize(
+    "keep_days, expected_count",
+    [
+        (7, 1),  # 保留7天，删除1个（8天前）
+        (10, 0),  # 保留10天，不删除
+        (1, 1),  # 保留1天，删除1个
+    ],
+)
 def test_cleanup_with_param(tmp_path, keep_days, expected_count):
     """参数化测试清理功能。"""
     backup_dir = tmp_path / "backups"

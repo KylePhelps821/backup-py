@@ -1,5 +1,6 @@
 """演示mock用法。"""
-from datetime import datetime
+
+from datetime import datetime, timezone
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -35,7 +36,7 @@ def test_with_patch(mock_fetch):
 
 def get_current_year() -> int:
     """获取当前年份。"""
-    return datetime.now().year
+    return datetime.now(timezone.utc).year
 
 
 @freeze_time("2020-01-01")
@@ -58,11 +59,14 @@ def test_call_assertions(mock_fetch):
     mock_fetch.assert_any_call("http://b.com")
 
 
-@pytest.mark.parametrize("user_id, expected", [
-    (1, "User_1"),
-    (2, "User_2"),
-    (100, "User_100"),
-])
+@pytest.mark.parametrize(
+    "user_id, expected",
+    [
+        (1, "User_1"),
+        (2, "User_2"),
+        (100, "User_100"),
+    ],
+)
 @patch("test_mock_demo.fetch_data_from_api")
 def test_param_with_mock(mock_fetch, user_id, expected):
     """参数化+mock组合。"""
