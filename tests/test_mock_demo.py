@@ -1,10 +1,13 @@
 """演示mock用法。"""
 
+import logging
 from datetime import datetime, timezone
 from unittest.mock import MagicMock, patch
 
 import pytest
 from freezegun import freeze_time
+
+logging.disable(logging.CRITICAL)
 
 
 def test_mock_basic():

@@ -1,0 +1,54 @@
+2026-10-08 17:17:25 [INFO] __main__ - ==================================================
+2026-10-08 17:17:25 [INFO] __main__ - 备份工具启动
+2026-10-08 17:17:25 [INFO] __main__ - 源目录：/home/kylephelps/projects/backup_script/source_data
+2026-10-08 17:17:25 [INFO] __main__ - 备份目录：/home/kylephelps/projects/backup-py/backups
+2026-10-08 17:17:25 [INFO] __main__ - ==================================================
+2026-10-08 17:17:25 [DEBUG] __main__ - 开始打包：/home/kylephelps/projects/backup_script/source_data -> /home/kylephelps/projects/backup-py/backups/backup_20261008_091725.tar.gz
+2026-10-08 17:17:25 [DEBUG] __main__ - 打包完成
+2026-10-08 17:17:25 [INFO] __main__ - 备份成功：backup_20261008_091725.tar.gz (0.4 KB)
+2026-10-08 17:17:25 [INFO] __main__ - 没有需要清理的旧备份
+2026-10-08 17:17:25 [INFO] __main__ - 备份完成！
+2026-10-08 17:18:01 [INFO] __main__ - ==================================================
+2026-10-08 17:18:01 [INFO] __main__ - 备份工具启动
+2026-10-08 17:18:01 [INFO] __main__ - 源目录：/home/kylephelps/projects/backup_script/source_data
+2026-10-08 17:18:01 [INFO] __main__ - 备份目录：/home/kylephelps/projects/backup-py/backups
+2026-10-08 17:18:01 [INFO] __main__ - ==================================================
+2026-10-08 17:18:01 [DEBUG] __main__ - 开始打包：/home/kylephelps/projects/backup_script/source_data -> /home/kylephelps/projects/backup-py/backups/backup_20261008_091801.tar.gz
+2026-10-08 17:18:01 [DEBUG] __main__ - 打包完成
+2026-10-08 17:18:01 [INFO] __main__ - 备份成功：backup_20261008_091801.tar.gz (0.4 KB)
+2026-10-08 17:18:01 [INFO] __main__ - 没有需要清理的旧备份
+2026-10-08 17:18:01 [INFO] __main__ - 备份完成！
+2026-10-09 15:45:22 [INFO] __main__ - ==================================================
+2026-10-09 15:45:22 [INFO] __main__ - 备份工具启动
+2026-10-09 15:45:22 [INFO] __main__ - 源目录：/home/kylephelps/projects/backup_script/source_data
+2026-10-09 15:45:22 [INFO] __main__ - 备份目录：/home/kylephelps/projects/backup-py/backups
+2026-10-09 15:45:22 [INFO] __main__ - 保留天数：7
+2026-10-09 15:45:22 [INFO] __main__ - ==================================================
+2026-10-09 15:45:22 [DEBUG] __main__ - 开始打包：/home/kylephelps/projects/backup_script/source_data -> /home/kylephelps/projects/backup-py/backups/backup_20261009_074522.tar.gz
+2026-10-09 15:45:22 [DEBUG] __main__ - 打包完成
+2026-10-09 15:45:22 [INFO] __main__ - 备份成功：backup_20261009_074522.tar.gz (0.4 KB)
+2026-10-09 15:45:22 [INFO] __main__ - 没有需要清理的旧备份
+2026-10-09 15:45:22 [INFO] __main__ - 备份完成！
+2026-10-09 15:45:13 [INFO] __main__ - ==================================================
+2026-10-09 15:45:13 [INFO] __main__ - 备份工具启动
+2026-10-09 15:45:13 [INFO] __main__ - 源目录：/home/kylephelps/projects/backup_script/source_data
+2026-10-09 15:45:13 [INFO] __main__ - 备份目录：/home/kylephelps/projects/backup-py/backups
+2026-10-09 15:45:13 [INFO] __main__ - 保留天数：7
+2026-10-09 15:45:13 [INFO] __main__ - ==================================================
+2026-10-09 15:45:13 [DEBUG] __main__ - 开始打包：/home/kylephelps/projects/backup_script/source_data -> /home/kylephelps/projects/backup-py/backups/backup_20261009_074513.tar.gz
+2026-10-09 15:45:13 [DEBUG] __main__ - 打包完成
+2026-10-09 15:45:13 [INFO] __main__ - 备份成功：backup_20261009_074513.tar.gz (0.4 KB)
+2026-10-09 15:45:13 [INFO] __main__ - 没有需要清理的旧备份
+2026-10-09 15:45:13 [INFO] __main__ - 备份完成！
+2026-10-09 15:45:13 [INFO] __main__ - ==================================================
+2026-10-09 15:45:13 [INFO] __main__ - 备份工具启动
+2026-10-09 15:45:13 [INFO] __main__ - 源目录：/home/kylephelps/projects/backup_script/source_data
+2026-10-09 15:45:13 [INFO] __main__ - 备份目录：/home/kylephelps/projects/backup-py/backups
+2026-10-09 15:45:13 [INFO] __main__ - 保留天数：7
+2026-10-09 15:45:13 [INFO] __main__ - ==================================================
+2026-10-09 15:45:13 [DEBUG] __main__ - 开始打包：/home/kylephelps/projects/backup_script/source_data -> /home/kylephelps/projects/backup-py/backups/backup_20261009_074513.tar.gz
+2026-10-09 15:45:13 [DEBUG] __main__ - 打包完成
+2026-10-09 15:45:13 [INFO] __main__ - 备份成功：backup_20261009_074513.tar.gz (0.4 KB)
+2026-10-09 15:45:13 [INFO] __main__ - 没有需要清理的旧备份
+2026-10-09 15:45:13 [INFO] __main__ - 备份完成！
+2026-10-09 15:45:51 [ERROR] backup_py.main - 源目录不存在：/nonexistent/path/xyz

@@ -1,6 +1,10 @@
 """演示自定义fixture。"""
 
+import logging
+
 import pytest
+
+logging.disable(logging.CRITICAL)
 
 
 @pytest.fixture

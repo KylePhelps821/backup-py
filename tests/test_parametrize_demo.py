@@ -1,6 +1,10 @@
 """演示参数化测试的多种写法。"""
 
+import logging
+
 import pytest
+
+logging.disable(logging.CRITICAL)
 
 
 def add(a: int, b: int) -> int:

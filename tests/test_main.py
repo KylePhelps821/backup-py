@@ -1,11 +1,15 @@
 """测试backup_py模块。"""
 
+import logging
 import os
 import time
 
 import pytest
 
 from backup_py.main import cleanup_old_backups, create_backup
+
+# 测试时禁用日志
+logging.disable(logging.CRITICAL)
 
 
 def test_create_backup(tmp_path) -> None:
