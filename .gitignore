@@ -13,26 +13,38 @@ dist/
 venv/
 env/
 ENV/
-myenv/
+.venv/
 
 # 测试
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
+.tox/
+
+# 类型检查
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
 # 代码检查工具
 .ruff_cache/
-.mypy_cache/
-
-# 备份文件（重要！不要上传）
-backups/
-*.tar.gz
 
 # IDE
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
+
+# 运行时
+backups/
+*.tar.gz
+backup.log
 
 # 系统
 .DS_Store
 Thumbs.db
+
+# 日志
+*.log
