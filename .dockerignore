@@ -1,0 +1,37 @@
+# 虚拟环境
+venv/
+env/
+.venv/
+
+# Python缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# 测试
+.coverage
+htmlcov/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# 运行时数据
+backups/
+*.tar.gz
+backup.log
+
+# 文档（可选保留）
+*.md
+!README.md
+
+# 系统
+.DS_Store
+Thumbs.db
