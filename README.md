@@ -15,3 +15,12 @@
 
 ```bash
 pip install -e ".[dev]"
+
+## Docker Compose
+
+### 快速开始
+
+1. 复制环境变量模板：
+
+```bash
+cp .env.example .env

@@ -1,0 +1,22 @@
+services:
+  backup:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: backup-py:v1
+    container_name: backup-service
+    env_file:
+      - .env
+    volumes:
+      - ./test_data:/app/data:ro
+      - backup_data:/app/backups
+    restart: "no"
+    networks:
+      - backup-net
+
+volumes:
+  backup_data:
+
+networks:
+  backup-net:
+    driver: bridge

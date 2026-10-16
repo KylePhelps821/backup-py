@@ -103,36 +103,35 @@ def cleanup_old_backups(backup_dir: str, keep_days: int = 7) -> list[str]:
 
 
 def parse_args() -> argparse.Namespace:
-    """解析命令行参数。
-
-    Returns:
-        解析后的参数命名空间
-    """
+    """解析命令行参数（支持环境变量）。"""
     parser = argparse.ArgumentParser(description="自动备份工具")
     parser.add_argument(
         "-s",
         "--source",
-        default="~/projects/backup_script/source_data",
-        help="要备份的源目录",
+        default=os.environ.get(
+            "BACKUP_SOURCE_DIR", "~/projects/backup_script/source_data"
+        ),
+        help="要备份的源目录（环境变量：BACKUP_SOURCE_DIR）",
     )
     parser.add_argument(
         "-b",
         "--backup",
-        default="~/projects/backup-py/backups",
-        help="备份存放目录",
+        default=os.environ.get("BACKUP_OUTPUT_DIR", "~/projects/backup-py/backups"),
+        help="备份存放目录（环境变量：BACKUP_OUTPUT_DIR）",
     )
     parser.add_argument(
         "-k",
         "--keep-days",
         type=int,
-        default=7,
-        help="保留天数（默认7天）",
+        default=int(os.environ.get("KEEP_DAYS", "7")),
+        help="保留天数（环境变量：KEEP_DAYS）",
     )
     parser.add_argument(
         "-v",
         "--verbose",
         action="store_true",
-        help="显示调试信息",
+        default=os.environ.get("LOG_LEVEL", "INFO").upper() == "DEBUG",
+        help="显示调试信息（环境变量：LOG_LEVEL=DEBUG）",
     )
     return parser.parse_args()
 
