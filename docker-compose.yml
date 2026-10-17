@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: backup-py:v1
+    image: kylephelps/backup-py:v2    # ← 改成你的 Docker Hub 镜像名
     container_name: backup-service
     env_file:
       - .env
